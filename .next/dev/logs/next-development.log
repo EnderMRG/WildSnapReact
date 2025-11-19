@@ -1,35 +1,88 @@
-[00:00:01.256] Server  LOG      ✓ Ready in 766ms
-[00:00:50.189] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:50.497] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:50.497] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:50.498] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487527359}
-[00:00:52.145] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487528999}
-[00:01:05.712] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:05.877] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:05.877] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
-[00:01:05.877] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487542735}
-[00:01:07.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:07.525] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:07.525] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
-[00:01:07.525] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487544385}
-[00:01:50.008] Server  LOG      ✓ Compiled in 155ms
-[00:01:50.848] Browser ERROR   ./app/detect/page.tsx:354:14
-Parsing ecmascript source code failed
-  352 |     </main>
-  353 |   )
-> 354 |         <div className="mb-8 flex items-center justify-between">
-      |              ^^^^^^^^^
-  355 |           <div>
-  356 |             <h1 className="text-2xl font-bold text-white mb-2">WildSnap</h1>
-  357 |             <p className="text-gray-400 text-sm">Animal Detection Studio</p>
+[00:00:01.114] Server  LOG      ✓ Ready in 769ms
+[00:00:57.288] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:57.493] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:57.493] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
+[00:00:57.493] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763531662999}
+[00:01:35.405] Server  LOG      ✓ Compiled in 110ms
+[00:01:47.110] Server  LOG      ✓ Compiled in 87ms
+[00:01:52.321] Server  LOG      ✓ Compiled in 82ms
+[00:02:09.093] Server  LOG      ✓ Compiled in 80ms
+[00:02:22.774] Server  LOG      ✓ Compiled in 78ms
+[00:02:32.450] Server  LOG      ✓ Compiled in 75ms
+[00:02:33.195] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
 
-Expected ';', got 'className'
+Previous: %s
+Incoming: %s useEffect [upload] [upload, false, false]
+[00:02:40.766] Server  LOG      ✓ Compiled in 93ms
+[00:02:47.454] Server  LOG      ✓ Compiled in 81ms
+[00:02:58.431] Server  LOG      ✓ Compiled in 91ms
+[00:03:02.944] Server  LOG      ✓ Compiled in 70ms
+[00:03:09.191] Server  LOG      ✓ Compiled in 86ms
+[00:05:06.141] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:06.352] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:06.352] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
+[00:05:06.352] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763531911851}
+[00:05:15.861] Browser LOG     Webcam started successfully
+[00:05:54.958] Browser LOG     Webcam started successfully
+[00:07:32.592] Server  LOG      ✓ Compiled in 97ms
+[00:07:38.237] Server  LOG      ✓ Compiled in 177ms
+[00:07:58.218] Server  LOG      ✓ Compiled in 75ms
+[00:08:05.552] Server  LOG      ✓ Compiled in 76ms
+[00:08:31.873] Server  LOG      ✓ Compiled in 142ms
+[00:08:59.709] Server  LOG      ✓ Compiled in 78ms
+[00:09:11.291] Server  LOG      ✓ Compiled in 130ms
+[00:09:17.582] Server  LOG      ✓ Compiled in 73ms
+[00:09:30.131] Server  LOG      ✓ Compiled in 71ms
+[00:10:04.577] Browser LOG     Webcam started successfully
+[00:11:07.955] Server  LOG      ✓ Compiled in 82ms
+[00:11:20.912] Server  LOG      ✓ Compiled in 79ms
+[00:11:26.631] Server  LOG      ✓ Compiled in 69ms
+[00:11:34.046] Server  LOG      ✓ Compiled in 72ms
+[00:11:39.271] Server  LOG      ✓ Compiled in 88ms
+[00:12:06.609] Server  LOG      ✓ Compiled in 77ms
+[00:12:18.979] Server  LOG      ✓ Compiled in 80ms
+[00:12:29.398] Server  LOG      ✓ Compiled in 133ms
+[00:13:43.683] Browser LOG     Webcam started successfully
+[00:13:45.298] Browser LOG     Starting live detection...
+[00:13:45.799] Browser LOG     Setting up detection interval
+[00:13:45.799] Browser LOG     Running first detection
+[00:14:58.244] Browser LOG     Webcam started successfully
+[00:15:01.490] Browser LOG     Starting live detection...
+[00:15:01.994] Browser LOG     Setting up detection interval
+[00:15:01.994] Browser LOG     Running first detection
+[00:15:21.367] Browser LOG     Webcam started successfully
+[00:15:23.976] Browser LOG     Starting live detection...
+[00:15:24.478] Browser LOG     Setting up detection interval
+[00:15:24.478] Browser LOG     Running first detection
+[00:16:56.595] Browser LOG     Webcam started successfully
+[00:16:58.237] Browser LOG     Starting live detection...
+[00:16:58.859] Browser LOG     Setting up detection interval
+[00:16:58.859] Browser LOG     Running first detection
+[00:21:14.792] Server  LOG      ✓ Compiled in 109ms
+[00:21:24.922] Server  LOG      ✓ Compiled in 75ms
+[00:21:25.189] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
 
-Import traces:
-  Client Component Browser:
-    ./app/detect/page.tsx [Client Component Browser]
-    ./app/detect/page.tsx [Server Component]
+Previous: %s
+Incoming: %s useEffect [] []
+[00:21:34.846] Server  LOG      ✓ Compiled in 82ms
+[00:22:00.086] Server  LOG      ✓ Compiled in 82ms
+[00:22:08.403] Server  LOG      ✓ Compiled in 75ms
+[00:22:36.411] Server  LOG      ✓ Compiled in 186ms
+[00:22:46.680] Server  LOG      ✓ Compiled in 92ms
+[00:22:53.332] Server  LOG      ✓ Compiled in 151ms
+[00:23:09.824] Server  LOG      ✓ Compiled in 88ms
+[00:23:22.406] Server  LOG      ✓ Compiled in 87ms
+[00:24:15.851] Server  LOG      ✓ Compiled in 164ms
+[00:24:38.429] Server  LOG      ✓ Compiled in 138ms
+[00:24:52.077] Server  LOG      ✓ Compiled in 87ms
+[00:26:02.231] Server  LOG      ✓ Compiled in 91ms
+[00:26:03.188] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
 
-  Client Component SSR:
-    ./app/detect/page.tsx [Client Component SSR]
-    ./app/detect/page.tsx [Server Component]
+Previous: %s
+Incoming: %s useEffect [false, , yolov8n] [false, , false, , yolov8n]
+[00:26:26.034] Server  LOG      ✓ Compiled in 81ms
+[00:26:37.977] Server  LOG      ✓ Compiled in 81ms
+[00:27:15.038] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:15.344] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:15.344] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
+[00:27:15.344] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763533240855}
