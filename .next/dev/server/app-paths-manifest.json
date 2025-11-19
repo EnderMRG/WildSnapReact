@@ -1,0 +1,4 @@
+{
+  "/detect/page": "app/detect/page.js",
+  "/page": "app/page.js"
+}

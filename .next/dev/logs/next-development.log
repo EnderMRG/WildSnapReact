@@ -1,0 +1,35 @@
+[00:00:01.256] Server  LOG      ✓ Ready in 766ms
+[00:00:50.189] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:50.497] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:50.497] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:50.498] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487527359}
+[00:00:52.145] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487528999}
+[00:01:05.712] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:05.877] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:05.877] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
+[00:01:05.877] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487542735}
+[00:01:07.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:07.525] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:07.525] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/detect","route":"/detect"}
+[00:01:07.525] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/detect color: rgb(120, 120, 120) color: inherit {"dp":"/detect","o":"http://localhost:3000/detect","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763487544385}
+[00:01:50.008] Server  LOG      ✓ Compiled in 155ms
+[00:01:50.848] Browser ERROR   ./app/detect/page.tsx:354:14
+Parsing ecmascript source code failed
+  352 |     </main>
+  353 |   )
+> 354 |         <div className="mb-8 flex items-center justify-between">
+      |              ^^^^^^^^^
+  355 |           <div>
+  356 |             <h1 className="text-2xl font-bold text-white mb-2">WildSnap</h1>
+  357 |             <p className="text-gray-400 text-sm">Animal Detection Studio</p>
+
+Expected ';', got 'className'
+
+Import traces:
+  Client Component Browser:
+    ./app/detect/page.tsx [Client Component Browser]
+    ./app/detect/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/detect/page.tsx [Client Component SSR]
+    ./app/detect/page.tsx [Server Component]
