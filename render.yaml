@@ -5,6 +5,7 @@ services:
   - type: web
     name: wildsnap-backend
     runtime: python
+    plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn --workers 4 --bind 0.0.0.0:10000 backend:app"
     healthCheckPath: /api/health
@@ -16,6 +17,7 @@ services:
   - type: web
     name: wildsnap-frontend
     runtime: node
+    plan: free
     buildCommand: "pnpm install && pnpm run build"
     startCommand: "pnpm run start"
     envVars:
