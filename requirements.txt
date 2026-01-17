@@ -4,3 +4,4 @@ ultralytics==8.1.0
 pillow==10.1.0
 numpy==1.24.3
 opencv-python==4.8.1.78
+gunicorn
