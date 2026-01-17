@@ -11,7 +11,7 @@ services:
     healthCheckPath: /api/health
     envVars:
       - key: PYTHON_VERSION
-        value: "3.9" # Or your desired Python version
+        value: "3.9.18" # Or your desired Python version
 
   # Frontend Service (Node.js/Next.js)
   - type: web
