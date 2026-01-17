@@ -289,42 +289,49 @@ export default function DetectPage() {
   }
 
   const handleDetect = async () => {
-    if (!uploadedImage) return
-    setIsLoading(true)
-    setError(null)
-    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:5000'
+  if (!uploadedImage) return
+  setIsLoading(true)
+  setError(null)
 
-    try {
-      const response = await fetch(`${backendUrl}/api/detect`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          image: uploadedImage,
-          model: selectedModel,
-          confidence: confidence,
-          iou: iouThreshold,
-          filter_animals: filterAnimals,
-        }),
-        mode: 'cors',
-      })
+  const backendUrl =
+    process.env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:5000"
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.error || `API Error: ${response.statusText}`)
-      }
+  try {
+    // Convert base64 dataURL -> Blob -> File
+    const res = await fetch(uploadedImage)
+    const blob = await res.blob()
+    const file = new File([blob], "image.jpg", { type: blob.type || "image/jpeg" })
 
-      const data = await response.json()
-      setDetectionResults(data.results as any)
-    } catch (err) {
-      const errorMsg = err instanceof Error ? err.message : 'Detection failed'
-      setError(`Failed to connect to the backend. Please ensure the backend server is running and accessible at ${backendUrl}. Details: ${errorMsg}`)
-      console.error('Detection error:', err)
-    } finally {
-      setIsLoading(false)
+    const formData = new FormData()
+    formData.append("file", file)
+    formData.append("model", selectedModel)
+    formData.append("confidence", confidence.toString())
+    formData.append("iou", iouThreshold.toString())
+    formData.append("filter_animals", filterAnimals.toString())
+
+    const response = await fetch(`${backendUrl}/api/detect-file`, {
+      method: "POST",
+      body: formData,
+    })
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}))
+      throw new Error(errorData.error || `API Error: ${response.statusText}`)
     }
+
+    const data = await response.json()
+    setDetectionResults(data.results as any)
+  } catch (err) {
+    const errorMsg = err instanceof Error ? err.message : "Detection failed"
+    setError(
+      `Failed to connect to the backend. Please ensure the backend server is running and accessible at ${backendUrl}. Details: ${errorMsg}`
+    )
+    console.error("Detection error:", err)
+  } finally {
+    setIsLoading(false)
   }
+}
+
 
   const runLiveDetection = async () => {
     if (!videoRef.current || isProcessingRef.current) {
