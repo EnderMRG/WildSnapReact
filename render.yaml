@@ -1,0 +1,26 @@
+# render.yaml
+
+services:
+  # Backend Service (Python/Flask)
+  - type: web
+    name: wildsnap-backend
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn --workers 4 --bind 0.0.0.0:5000 backend:app"
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.9" # Or your desired Python version
+
+  # Frontend Service (Node.js/Next.js)
+  - type: web
+    name: wildsnap-frontend
+    runtime: node
+    buildCommand: "pnpm install && pnpm run build"
+    startCommand: "pnpm run start"
+    envVars:
+      - key: NEXT_PUBLIC_BACKEND_URL
+        fromService:
+          type: web
+          name: wildsnap-backend
+          property: url
