@@ -318,8 +318,9 @@ def detect_file():
             'filter_animals': filter_animals
         }
         
-        request.json = data
-        return detect()
+        with app.test_request_context(json=data):
+            return detect()
+
     
     except Exception as e:
         print(f"Error in /api/detect-file: {e}")
