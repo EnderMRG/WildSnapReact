@@ -15,6 +15,7 @@ import os
 from datetime import datetime
 import torch
 from ultralytics.nn.tasks import DetectionModel
+from torch.nn import Sequential
 
 
 app = Flask(__name__)
@@ -24,7 +25,7 @@ app = Flask(__name__)
 def after_request(response):
     response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    response.headers.add('Access-control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     return response
 
 @app.before_request
@@ -37,8 +38,8 @@ models = {}
 
 def load_models():
     """Load YOLOv8 models at startup"""
-    # Add the DetectionModel to the list of safe globals
-    torch.serialization.add_safe_globals([DetectionModel])
+    # Add the required model classes to the list of safe globals
+    torch.serialization.add_safe_globals([DetectionModel, Sequential])
     try:
         print("Loading YOLOv8n model...")
         models['yolov8n'] = YOLO("yolov8n.pt")
