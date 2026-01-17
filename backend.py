@@ -73,6 +73,11 @@ def run_detection(model, image_data, conf_threshold, iou_threshold, filter_anima
     Run YOLO detection on image
     Returns: annotated_image, detections, inference_time
     """
+
+    image = image.convert("RGB")
+    image.thumbnail((640, 640))
+    img_np = np.array(image)
+
     if model is None:
         return None, [], 0
     

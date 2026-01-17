@@ -7,7 +7,7 @@ services:
     runtime: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn --workers 4 --bind 0.0.0.0:10000 backend:app"
+    startCommand: "gunicorn backend:app --bind 0.0.0.0:$PORT --workers 1 --threads 1 --timeout 180"
     healthCheckPath: /api/health
     envVars:
       - key: PYTHON_VERSION
