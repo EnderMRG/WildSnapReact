@@ -13,6 +13,9 @@ import time
 import json
 import os
 from datetime import datetime
+import torch
+from ultralytics.nn.tasks import DetectionModel
+
 
 app = Flask(__name__)
 
@@ -34,6 +37,8 @@ models = {}
 
 def load_models():
     """Load YOLOv8 models at startup"""
+    # Add the DetectionModel to the list of safe globals
+    torch.serialization.add_safe_globals([DetectionModel])
     try:
         print("Loading YOLOv8n model...")
         models['yolov8n'] = YOLO("yolov8n.pt")
